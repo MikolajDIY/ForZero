@@ -1,0 +1,81 @@
+# ====================================================================
+# GŁÓWNE FOLDERY BUDOWANIA I ZALEŻNOŚCI (Najważniejsze)
+# ====================================================================
+# Ignoruje foldery build w dowolnym miejscu w projekcie (np. PC_App/build/)
+**/build/
+**/Build/
+**/out/
+**/bin/
+
+# Ignoruje automatycznie pobierane zależności przez CMake FetchContent (np. _deps/)
+**/_deps/
+
+# ====================================================================
+# PLIKI BINARNE, WYKONYWALNE I BIBLIOTEKI
+# ====================================================================
+# Pliki wykonywalne systemów Windows i Unix
+*.exe
+*.out
+*.app
+
+# Biblioteki dynamiczne i statyczne
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+
+# Pliki obiektów kompilacji pośredniej
+*.o
+*.obj
+*.pch
+*.gch
+
+# Pliki zrzutu pamięci po awarii
+*.stackdump
+*.core
+
+# ====================================================================
+# PAMIĘĆ PODRĘCZNA (CACHE) SYSTEMU CMAKE
+# ====================================================================
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+Makefile
+targets.make
+install_manifest.txt
+compile_commands.json
+
+# ====================================================================
+# ŚRODOWISKA I EDYTORZY (IDE)
+# ====================================================================
+# Visual Studio Code
+.vscode/
+!.vscode/extensions.json
+
+# Visual Studio (MSVC)
+.vs/
+*.user
+*.suo
+*.idb
+*.ncb
+*.pdb
+*.ilk
+*.lksh
+*.sln
+
+# CLion / IntelliJ
+.idea/
+cmake-build-*/
+
+# Pliki tymczasowe systemu Windows i macOS
+Thumbs.db
+.DS_Store
+
+# ====================================================================
+# ZASOBY I PLIKI LOKALNE
+# ====================================================================
+# Jeśli kopiujesz czcionki systemowe (np. arial.ttf) bezpośrednio do folderów uruchomieniowych,
+# a nie chcesz zaśmiecać nimi repozytorium, możesz odkomentować poniższą linię:
+# *.ttf

@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1782636259 source:c:\users\rataj\desktop\uart_test\main.cpp
+	<iostream>
+	<windows.h>
+	<chrono>
+	<thread>
+	<cstdint>
+

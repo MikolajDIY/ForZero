@@ -24,70 +24,51 @@ void setup() {
 }
 
 void loop() {
-  static int cout = 0;
+  static int cout_1A0 = 0;
+  static int cout_2A0 = 0;
+  static int cout_280 = 0;
+  static int cout_288 = 0;
   // -------------------------------------------------------------------------
   // 1. RAMKA 0x280 - SILNIK (Motor 1)
   // Steruje: Obrotomierzem, kontrolką EPC, Check Engine, Immobilizer
   // Obroty: Bajty 2 i 3 (Wartość = RPM * 4). Poniżej: 0x40 0x1F = 8000 = 2000 RPM
-  // Bajt 5: Flagi (0x02 = Check Engine OFF, 0x01 = EPC OFF)
-  // -------------------------------------------------------------------------
-  byte msg_rpm[8] = {0x49, 0x0E, 0x40, 0x1F, 0xB8, 0x03, 0x00, 0x00};
-
-
-  // -------------------------------------------------------------------------
+  byte msg_rpm[8] = {0x00, 0x00, 0x34, 0x0B, 0x00, 0x12, 0x00, 0x00};
   // 2. RAMKA 0x288 - SILNIK (Motor 2)
-  // Steruje: Kontrolką Tempomatu (Cruise Control)
-  // Bajt 5 (Bit 0) = Tempomat (1 = Wł, 0 = Wył)
-  // -------------------------------------------------------------------------
-  byte msg_motor2[8] = {0x00, 0xB8, 0x4B, 0x01, 0x08, 0x01, 0x00, 0x00};
-
-
-  // -------------------------------------------------------------------------
-  // 3. RAMKA 0x1A0 - HAMULCE/ABS (Brakes 1)
-  // Steruje: Prędkościomierzem (Prędkość pojazdu), Kontrolką ABS, Kontrolką ESP
-  // Prędkość: Bajty 1 i 2 (Wartość = km/h * 100). 
-  // Poniżej: 0x27 0x10 = 10000 = 100 km/h
-  // Flagi ABS/ESP są na bajtach 0 i 3.
-  // -------------------------------------------------------------------------
-  byte msg_speed[8] = {0x18, 0x10, 0x27, 0x00, 0x00, 0x00, 0x00, 0x00};
-
-
-  // -------------------------------------------------------------------------
-  // 4. RAMKA 0x5A0 - HAMULCE/ABS (Brakes 2)
-  // Steruje: Zgaszeniem kontrolki ręcznego/awarii hamulców (często pika na żółto)
-  // Symuluje poprawny stan systemu (brak błędu EBD/ABS)
-  // -------------------------------------------------------------------------
-  byte msg_brakes2[8] = {0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
-
-
-  // -------------------------------------------------------------------------
-  // 5. RAMKA 0x5A4 - GATEWAY/IMMOBILIZER
-  // W VAG czasami wymagana, aby licznik nie "krzyczał", że brak komunikacji
-  // z bramką sieciową (CAN Gateway).
-  // -------------------------------------------------------------------------
-  byte msg_gateway[8] = {0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
-
-  // Ramka 0x050 - Airbag (Wysyłana co 100ms)
-  // W VAG same zera oznaczają brak usterek w systemie
-  byte msg_airbag[8] = {0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
-
-
+   byte msg_motor2[8] = {0xC0, 0x10, 0x8A, 0x00, 0x02, 0x00, 0x01, 0x00};
+  // 3. RAMKA 0x1A0 
+  byte msg_speed[8] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+  // 4. RAMKA 0x2A0
+  byte msg_breaks[8] = {0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x00, 0x00};
   
-  // Wysyłanie pakietu danych (co 50ms = 20Hz)
-  CAN.sendMsgBuf(0x280, 0, 8, msg_rpm);
-  CAN.sendMsgBuf(0x288, 0, 8, msg_motor2);
-  CAN.sendMsgBuf(0x1A0, 0, 8, msg_speed);
-  CAN.sendMsgBuf(0x5A0, 0, 8, msg_brakes2);
-  CAN.sendMsgBuf(0x5A4, 0, 8, msg_gateway);
-  if(cout == 2){
-    CAN.sendMsgBuf(0x050, 0, 8, msg_airbag);
-    cout =0;
+
+  if(cout_280 == 2){
+    CAN.sendMsgBuf(0x280, 0, 8, msg_rpm);
+    cout_280 = 0;
+  }
+  if(cout_288 == 5){
+    CAN.sendMsgBuf(0x288, 0, 8, msg_motor2);
+    cout_288 =0;
+  }
+  if(cout_1A0 == 2){
+    CAN.sendMsgBuf(0x1A0, 0, 8, msg_speed);
+    cout_1A0 = 0;
+  }
+  if(cout_2A0 == 5){
+    CAN.sendMsgBuf(0x5A0, 0, 8, msg_breaks);
+    cout_2A0 =0;
+  }
+  if(cout_2A0 == 5){
+    CAN.sendMsgBuf(0x0A0, 0, 8, msg_breaks);
+    cout_2A0 =0;
   }
 
   // Mruganie diodą jako potwierdzenie działania pętli
   digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN));
 
   // Opóźnienie 50ms - standard VAG dla płynnego ruchu wskazówek
-  delay(50); 
-  cout ++;
+  delay(10); 
+  cout_280 ++;
+  cout_288 ++;
+  cout_1A0 ++;
+  cout_2A0 ++;
 }

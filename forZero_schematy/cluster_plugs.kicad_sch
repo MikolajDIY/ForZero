@@ -1470,10 +1470,6 @@
 		(uuid "1d5a4408-355e-47db-8f3c-5a5e0ea0bba6")
 	)
 	(no_connect
-		(at 170.18 111.76)
-		(uuid "257e5f87-abb1-4bd9-8e06-42e14fafbf44")
-	)
-	(no_connect
 		(at 99.06 119.38)
 		(uuid "6ddcf299-a4b9-441f-8940-823866c72e26")
 	)
@@ -1523,16 +1519,6 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 111.76) (xy 190.5 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "11502059-f0c2-4df0-9b2f-ed7bb3d3ebac")
-	)
-	(wire
-		(pts
 			(xy 85.09 77.47) (xy 86.36 77.47)
 		)
 		(stroke
@@ -1573,6 +1559,16 @@
 	)
 	(wire
 		(pts
+			(xy 167.64 111.76) (xy 170.18 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62a7d379-1a8a-4668-b2dc-6af25b9e92be")
+	)
+	(wire
+		(pts
 			(xy 167.64 114.3) (xy 170.18 114.3)
 		)
 		(stroke
@@ -1610,6 +1606,16 @@
 			(type default)
 		)
 		(uuid "6ddc37ef-ff39-4261-a737-97ac2971e1f8")
+	)
+	(wire
+		(pts
+			(xy 190.5 111.76) (xy 193.04 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a8dd429-d4d5-44a5-b646-95a23489fec3")
 	)
 	(wire
 		(pts
@@ -1711,6 +1717,28 @@
 		)
 		(uuid "ebadb78f-f675-4a18-8271-16b60dddef99")
 	)
+	(global_label "CLUSTER_TCR"
+		(shape input)
+		(at 193.04 111.76 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "011c55e4-7d6b-4aa3-be32-c8927b851852")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 208.7251 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "CLUSTER_ABS"
 		(shape input)
 		(at 167.64 114.3 180)
@@ -1779,27 +1807,27 @@
 	)
 	(global_label "CLUSTER_SENSOR"
 		(shape input)
-		(at 193.04 111.76 0)
+		(at 167.64 111.76 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "58d5f9c5-1077-40df-87e1-4b946575cb6d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 212.7165 111.76 0)
+			(at 147.9635 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 				(hide yes)
 			)
 		)
 	)
-	(global_label "CLUSTER_BREAK_PADS"
+	(global_label "CLUSTER_BRAKE_PADS"
 		(shape input)
 		(at 193.04 114.3 0)
 		(fields_autoplaced yes)

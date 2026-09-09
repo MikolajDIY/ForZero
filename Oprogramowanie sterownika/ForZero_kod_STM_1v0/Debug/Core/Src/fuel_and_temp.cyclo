@@ -1,0 +1,2 @@
+../Core/Src/fuel_and_temp.c:44:6:Send_Engine_Temperature	3
+../Core/Src/fuel_and_temp.c:60:6:Send_Fuel_lvl	3

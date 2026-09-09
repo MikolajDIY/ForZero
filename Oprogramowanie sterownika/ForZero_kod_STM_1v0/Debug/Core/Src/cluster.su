@@ -1,0 +1,5 @@
+../Core/Src/cluster.c:27:16:calculate_crc8	24	static
+../Core/Src/cluster.c:42:6:parse_packet	24	static
+../Core/Src/cluster.c:112:6:start_cluster_test	8	static
+../Core/Src/cluster.c:118:9:is_cluster_test_active	4	static
+../Core/Src/cluster.c:122:6:process_cluster_test	16	static

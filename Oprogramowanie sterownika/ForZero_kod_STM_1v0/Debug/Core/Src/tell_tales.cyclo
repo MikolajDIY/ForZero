@@ -1,0 +1,3 @@
+../Core/Src/tell_tales.c:38:6:Pin_Write	1
+../Core/Src/tell_tales.c:42:6:Send_TellTales	3
+../Core/Src/tell_tales.c:58:6:TellTales_Init	1

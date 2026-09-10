@@ -1,7 +1,7 @@
 # ====================================================================
-# GŁÓWNE FOLDERY BUDOWANIA I ZALEŻNOŚCI (Najważniejsze)
+# GŁÓWNE FOLDERY BUDOWANIA I ZALEŻNOŚCI 
 # ====================================================================
-# Ignoruje foldery build w dowolnym miejscu w projekcie (np. PC_App/build/)
+# Ignoruje foldery build w dowolnym miejscu w projekcie 
 **/build/
 **/Build/
 **/out/
@@ -9,6 +9,22 @@
 
 # Ignoruje automatycznie pobierane zależności przez CMake FetchContent (np. _deps/)
 **/_deps/
+
+# Build output
+**/Debug/
+**/Release/
+
+# Eclipse / CubeIDE local settings
+**/.settings/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.bak
+*.tmp
+*~
 
 # ====================================================================
 # PLIKI BINARNE, WYKONYWALNE I BIBLIOTEKI
@@ -73,9 +89,3 @@ cmake-build-*/
 Thumbs.db
 .DS_Store
 
-# ====================================================================
-# ZASOBY I PLIKI LOKALNE
-# ====================================================================
-# Jeśli kopiujesz czcionki systemowe (np. arial.ttf) bezpośrednio do folderów uruchomieniowych,
-# a nie chcesz zaśmiecać nimi repozytorium, możesz odkomentować poniższą linię:
-# *.ttf

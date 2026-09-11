@@ -6,11 +6,11 @@ ForZero powstał jako próba wykorzystania fizycznego zestawu wskaźników jako 
 
 ![Licznik Audi A4 B6 i sterownik ForZero podczas pracy](Obrazy/zestaw.png)
 
-## Demo
+## Film prezentujący projekt
 
-<!-- Do uzupełnienia: wstaw link do opublikowanego filmu, np. [Zobacz demonstrację na YouTube](URL). -->
+[![ForZero – prezentacja projektu](https://img.youtube.com/vi/puXx0WQHfvw/maxresdefault.jpg)](https://www.youtube.com/watch?v=puXx0WQHfvw)
 
-Film przedstawiający projekt: link zostanie dodany po publikacji.
+[Obejrzyj film na YouTube](https://www.youtube.com/watch?v=puXx0WQHfvw)
 
 ## Możliwości
 

@@ -4,8 +4,6 @@ Sterownik fizycznego zestawu wskaźników Audi A4 B6, pozwalający wyświetlać 
 
 ForZero powstał jako próba wykorzystania fizycznego zestawu wskaźników jako elementu stanowiska simracingowego. Projekt obejmuje rozpoznanie sposobów sterowania licznikiem, zaprojektowanie i uruchomienie własnej PCB, firmware mikrokontrolera oraz aplikację komputerową.
 
-![Licznik Audi A4 B6 i sterownik ForZero podczas pracy](Obrazy/zestaw.png)
-
 ## Film prezentujący projekt
 
 [![ForZero – prezentacja projektu](https://img.youtube.com/vi/puXx0WQHfvw/maxresdefault.jpg)](https://www.youtube.com/watch?v=puXx0WQHfvw)

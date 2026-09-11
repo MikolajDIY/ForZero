@@ -90,6 +90,7 @@ W zestawach pomiarowych opisanych w dokumentacji średnie RTT zazwyczaj wynosił
 | [Oprogramowanie sterownika](Oprogramowanie%20sterownika/) | Projekt firmware mikrokontrolera STM32 |
 | [Schematy](Schematy/) | Materiały dotyczące części sprzętowej |
 | [Obrazy](Obrazy/) | Zdjęcia i grafiki wykorzystywane w README |
+| [Dokumentacja](ForZero_dokumentacja_v1.pdf) | Szczegółowa dokumentacja projektu |
 
 ## Uruchomienie
 

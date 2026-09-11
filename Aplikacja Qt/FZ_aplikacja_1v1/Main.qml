@@ -9,7 +9,7 @@ Window {
     minimumWidth: 550
     minimumHeight: 420
     visible: true
-    title: "FH6 Telemetry Cluster"
+    title: "forZero Telemetry Cluster"
     color: "#f4f5f7"
 
     ColumnLayout {

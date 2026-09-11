@@ -12,6 +12,7 @@ void FH6TelemetryReceiver::start() {
         udpSocket = new QUdpSocket(this);
 
         connect(udpSocket, &QUdpSocket::readyRead, this, &FH6TelemetryReceiver::processPendingDatagrams);
+        udpSocket->bind(QHostAddress::AnyIPv4, m_port, QUdpSocket::ShareAddress | QUdpSocket::ReuseAddressHint);
     }
 }
 
@@ -36,4 +37,5 @@ void FH6TelemetryReceiver::processPendingDatagrams() {
         }
     }
 }
+
 

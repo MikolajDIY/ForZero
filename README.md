@@ -41,7 +41,7 @@ Wskazania paliwa i temperatury skalibrowano eksperymentalnie. Zmierzone charakte
 
 ## Sprzęt
 
-![Płytka sterownika ForZero](Obrazy/pcb.png)
+![Płytka sterownika ForZero](Obrazy/pcb.jpg)
 
 - Autorska dwuwarstwowa PCB zaprojektowana w KiCad.
 - Mikrokontroler STM32F105 z jednoczesną obsługą USB i CAN.
